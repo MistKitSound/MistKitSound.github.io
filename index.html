@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | Soundtrack Store</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <a href="#profile" class="nav-link section-link active" data-section-link="profile">Profile</a>
+      <a href="#pricing" class="nav-link section-link" data-section-link="pricing">Pricing</a>
+      <a href="#license" class="nav-link section-link" data-section-link="license">License</a>
+      <a href="#faq" class="nav-link section-link" data-section-link="faq">FAQ</a>
+      <a href="#tracks" class="nav-link section-link" data-section-link="tracks">Tracks</a>
+      <button class="contact-toggle" id="contactToggle" type="button" aria-expanded="false">Contact me</button>
+    </nav>
+    <div class="contact-dropdown" id="contactDropdown" hidden>
+      <a href="https://t.me/your_telegram" target="_blank" rel="noopener noreferrer">Telegram</a>
+      <a href="https://discord.com/users/your_discord_id" target="_blank" rel="noopener noreferrer">Discord</a>
+      <a href="https://x.com/your_x_handle" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+      <a href="mailto:myemail@gmail.com">myemail@gmail.com</a>
+    </div>
+  </header>
+
+  <main class="container profile-page">
+    <section class="app-section is-active" data-section="profile">
+      <section class="profile-card">
+        <img src="./content/images/pfp.png" alt="Profile picture" class="profile-avatar" onerror="this.src='./content/images/profile.png'; this.onerror=null;">
+        <div class="profile-info">
+          <h1>MistKitSound</h1>
+          <p>Header</p>
+          <p>Description here</p>
+          <a class="order-btn profile-order-btn section-link" href="#pricing" data-section-link="pricing">Order now</a>
+        </div>
+      </section>
+
+      <section class="tracks-section">
+        <div class="tracks-header">
+          <h2>Tracks</h2>
+          <div class="header-links">
+            <a class="buy-now-link section-link" href="#pricing" data-section-link="pricing">Buy now</a>
+            <a class="buy-now-link section-link" href="#tracks" data-section-link="tracks">All tracks</a>
+          </div>
+        </div>
+        <p class="note">Displayed only when track is playing.</p>
+        <ul id="profileTrackList" class="track-list" data-track-list="preview"></ul>
+        <button id="profileMoreTracksBtn" class="secondary-btn" type="button" data-more-btn="profileTrackList" hidden>More tracks</button>
+      </section>
+    </section>
+
+    <section class="app-section" data-section="pricing">
+      <section class="pricing-grid">
+        <article class="pricing-card">
+          <h2>Custom Track</h2>
+          <p class="price">$25-50</p>
+          <p>Description here</p>
+          <a href="https://example.com/order-custom" target="_blank" rel="noopener noreferrer" class="order-btn">Order now</a>
+        </article>
+        <article class="pricing-card">
+          <h2>Commercial rights</h2>
+          <p class="price">$10</p>
+          <p>Description here</p>
+          <a href="https://example.com/order-commercial" target="_blank" rel="noopener noreferrer" class="order-btn">Order now</a>
+        </article>
+        <article class="pricing-card">
+          <h2>Full Rights</h2>
+          <p class="price">$50-80</p>
+          <p>Description here</p>
+          <a href="https://example.com/order-full" target="_blank" rel="noopener noreferrer" class="order-btn">Order now</a>
+        </article>
+      </section>
+    </section>
+
+    <section class="app-section" data-section="license">
+      <article class="text-page">
+        <h1>License</h1>
+        <p>All music tracks are copyrighted by the author unless explicitly stated otherwise.</p>
+        <h2>Usage</h2>
+        <ul>
+          <li>Personal use is allowed after purchase.</li>
+          <li>Commercial usage requires commercial rights.</li>
+          <li>Full rights transfer is available in a dedicated package.</li>
+        </ul>
+        <h2>Restrictions</h2>
+        <ul>
+          <li>No redistribution of raw files.</li>
+          <li>No resale without written permission.</li>
+          <li>No claiming authorship of the original work.</li>
+        </ul>
+        <p>For custom agreements, contact me through the social links in the website header.</p>
+      </article>
+    </section>
+
+    <section class="app-section" data-section="faq">
+      <article class="text-page">
+        <h1>FAQ</h1>
+        <h2>How long does custom production take?</h2>
+        <p>Most custom orders are delivered within 3-7 days depending on complexity.</p>
+        <h2>What formats do you provide?</h2>
+        <p>Usually WAV and MP3. Additional formats are available on request.</p>
+        <h2>Can I request revisions?</h2>
+        <p>Yes. Revisions are included according to the package terms.</p>
+        <h2>Do you make exclusive tracks?</h2>
+        <p>Yes. Choose the Full Rights package for exclusive ownership terms.</p>
+        <h2>How do I place an order?</h2>
+        <p>Go to the pricing page and click <strong>Order now</strong> for the package you need.</p>
+      </article>
+    </section>
+
+    <section class="app-section" data-section="tracks">
+      <section class="tracks-section">
+        <div class="tracks-header">
+          <h2>All tracks</h2>
+          <a class="buy-now-link section-link" href="#pricing" data-section-link="pricing">Buy now</a>
+        </div>
+        <p class="note">Full catalog. One track can play at a time.</p>
+        <ul id="allTrackList" class="track-list" data-track-list="all"></ul>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    window.TRACKS_FALLBACK = [
+      "Abyssal Drift.ogg",
+      "Digital Church.ogg",
+      "Ephireal.ogg",
+      "heartbreak.org.ogg",
+      "High Technologies.ogg",
+      "i_wanna_spend_my_money_but_i_dont_have_enough.ogg",
+      "Low Voltage.ogg",
+      "Natural Disaster.ogg",
+      "Natural Routine.ogg",
+      "owo.ogg",
+      "speedwalk.ogg"
+    ];
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>
