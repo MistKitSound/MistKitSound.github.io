@@ -1,0 +1,18 @@
+[
+  {"name": "Abyssal Drift", "file": "./content/audio/Abyssal Drift.ogg"},
+  {"name": "April Waltz", "file": "./content/audio/aprilwaltz.ogg"},
+  {"name": "Digital Church", "file": "./content/audio/Digital Church.ogg"},
+  {"name": "Ephireal", "file": "./content/audio/Ephireal.ogg"},
+  {"name": "Golden Goose", "file": "./content/audio/Golden Goose.ogg"},
+  {"name": "heartbreak.org", "file": "./content/audio/heartbreak.org.ogg"},
+  {"name": "High Technologies", "file": "./content/audio/High Technologies.ogg"},
+  {"name": "i_wanna_spend_my_money_but_i_dont_have_enough", "file": "./content/audio/i_wanna_spend_my_money_but_i_dont_have_enough.ogg"},
+  {"name": "Low Voltage", "file": "./content/audio/Low Voltage.ogg"},
+  {"name": "maywaltz", "file": "./content/audio/maywaltz.ogg", "category": "piano"},
+  {"name": "Natural Disaster", "file": "./content/audio/Natural Disaster.ogg"},
+  {"name": "Natural Routine", "file": "./content/audio/Natural Routine.ogg"},
+  {"name": "owo", "file": "./content/audio/owo.ogg"},
+  {"name": "Rage", "file": "./content/audio/Rage.ogg"},
+  {"name": "Ship Of Those Who Was Murdered By God Will", "file": "./content/audio/Ship Of Those Who Was Murdered By God Will.mp3"},
+  {"name": "speedwalk", "file": "./content/audio/speedwalk.ogg"}
+]
